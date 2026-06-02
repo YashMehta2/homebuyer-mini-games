@@ -1,4 +1,5 @@
 import React from 'react';
+import PhaserConfetti from '../phaser/PhaserConfetti';
 
 function BidBattleResult({ result, onNext, isLast }) {
   const formatMoney = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(val);
@@ -15,6 +16,7 @@ function BidBattleResult({ result, onNext, isLast }) {
 
   return (
     <div className="card fade-in result-modal">
+      <PhaserConfetti trigger={result.isWin} />
       <h2 style={{ textAlign: 'center', marginBottom: 24 }}>Round Results</h2>
       
       <div className="reasoning">

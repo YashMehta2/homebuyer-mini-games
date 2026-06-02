@@ -1,5 +1,6 @@
 import React from 'react';
 import Tooltip from '../shared/Tooltip';
+import PhaserConfetti from '../phaser/PhaserConfetti';
 
 function StackTheCloseFinal({ history, correctCount, onComplete }) {
   let heading = "Hit the Books! 📖";
@@ -30,6 +31,7 @@ function StackTheCloseFinal({ history, correctCount, onComplete }) {
 
   return (
     <div className="card fade-in text-center">
+      <PhaserConfetti trigger={correctCount >= 13} />
       <h1 style={{ marginBottom: 8 }}>{correctCount} / 15 Correct</h1>
       <div className="score-badge" style={{ marginBottom: 32 }}>{heading}</div>
 

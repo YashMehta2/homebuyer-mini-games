@@ -28,7 +28,7 @@ function StackTheCloseGame({ items, onComplete, onQuit }) {
     if (currentIndex < items.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      onComplete([...results, res]); // we use results from state which already has it appended, wait no we appended it. Actually setResults was called before, but the state variable `results` in this closure doesn't have it yet, so we must be careful or just use `results` + the new one. I appended it in handleSelection. But inside handleNext closure, `results` is not updated yet if it's the old closure. Wait, handleNext will run in a fresh render where `results` has the new item. Let's just use `results`. Actually, let's just pass `results` to onComplete.
+      onComplete([...results, res]);
     }
   };
 

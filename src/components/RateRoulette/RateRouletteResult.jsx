@@ -1,5 +1,6 @@
 import React from 'react';
 import { calculateMonthlyPayment } from '../../utils/mortgageCalc';
+import PhaserConfetti from '../phaser/PhaserConfetti';
 
 function RateRouletteResult({ scenario, rates, lockedDay, lockedRate, onNext }) {
   const formatMoney = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(val);
@@ -37,6 +38,7 @@ function RateRouletteResult({ scenario, rates, lockedDay, lockedRate, onNext }) 
 
   return (
     <div className="card fade-in text-center">
+      <PhaserConfetti trigger={scoreType.includes("Excellent")} />
       {lockedDay === 30 && <div className="warning-banner">You ran out of time! The rate was auto-locked on the last day.</div>}
       <h2>You locked at {lockedRate.toFixed(2)}% on Day {lockedDay}</h2>
       

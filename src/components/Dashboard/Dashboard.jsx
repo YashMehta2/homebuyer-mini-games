@@ -1,5 +1,7 @@
 import React from 'react';
 import ProgressRing from '../shared/ProgressRing';
+import PhaserConfetti from '../phaser/PhaserConfetti';
+import PhaserHouseScene from '../phaser/PhaserHouseScene';
 import './Dashboard.css';
 
 function Dashboard({ gameScores, onSelectGame }) {
@@ -37,6 +39,12 @@ function Dashboard({ gameScores, onSelectGame }) {
 
   return (
     <div className="dashboard fade-in">
+      <PhaserConfetti trigger={calculateTotalScore() >= 80} />
+      <PhaserHouseScene completedGames={{
+        bidBattle: gameScores.bidBattle > 0,
+        rateRoulette: gameScores.rateRoulette > 0,
+        stackTheClose: gameScores.stackTheClose > 0
+      }} />
       <header className="dashboard-header">
         <h1>🏠 Nest Navigate</h1>
         <h2>Learn the homebuying journey — one game at a time</h2>
