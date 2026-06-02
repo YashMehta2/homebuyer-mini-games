@@ -1,0 +1,44 @@
+.progress-ring-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  stroke: var(--primary-light);
+}
+
+.progress-ring-fill {
+  stroke: var(--accent-green);
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.progress-ring-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-value {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
