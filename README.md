@@ -35,7 +35,6 @@ Through these simulations, the platform builds a "Homebuyer Readiness Score" to 
 - **Backend & Persistence:** Add a backend to store user scores via `localStorage` or a lightweight database like Supabase/Firebase, allowing users to track their readiness score over multiple sessions.
 - **Animations:** Implement more sophisticated Framer Motion or CSS keyframe animations for page transitions and game completion celebrations to make it feel even more polished.
 - **More Scenarios:** Expand the library of houses and loan scenarios, perhaps integrating a live API to pull actual current interest rates instead of using a randomized generator.
-- **Accessibility (a11y):** Do a full audit for keyboard navigation and screen reader support, especially on the interactive sliders and custom checkboxes.
 
 ## Known Issues
 - Tooltips currently have a fixed max-width, which can occasionally look cramped if viewing on very narrow mobile screens.
