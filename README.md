@@ -29,6 +29,7 @@ Through these simulations, the platform builds a "Homebuyer Readiness Score" to 
 - **Vanilla CSS:** To keep the project lightweight and strictly adhering to modern CSS standards (CSS Variables, Flexbox, Grid), I avoided Tailwind or styled-components. The application uses a custom "glassmorphism" dark-mode theme built entirely from scratch to give it a premium feel.
 - **No External State Libraries:** I chose not to use Redux or Context API because the application state is simple enough to be managed directly at the top level and passed down as props, keeping the codebase extremely readable for early-career developers.
 - **No External UI Component Libraries:** Everything from the progress rings to the tooltips to the image carousels was built from scratch.
+- **Phaser 3 (Visual Enhancements):** Integrated as a purely visual layer to add dynamic 2D animations (like the animated dashboard neighborhood and confetti particle explosions) without cluttering or altering the core React state logic.
 
 ## What I'd Do With More Time
 - **Backend & Persistence:** Add a backend to store user scores via `localStorage` or a lightweight database like Supabase/Firebase, allowing users to track their readiness score over multiple sessions.

@@ -49,7 +49,6 @@ export default class HouseScene extends Phaser.Scene {
       hGraphics.fillStyle(0xffffff, 0.8);
       hGraphics.fillRect(hx - 10, hy - 20, 20, 20);
 
-      // Trees
       hGraphics.fillStyle(0x8b4513, 1);
       hGraphics.fillRect(hx + 35, hy - 15, 6, 15);
       hGraphics.fillStyle(0x22c55e, 1);
